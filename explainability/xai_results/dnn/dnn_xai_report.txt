@@ -1,0 +1,22 @@
+Explainability Evaluation Report - dnn
+==================================================
+
+SHAP samples used: 300
+LIME samples used: 100
+
+SHAP total runtime: 113.3078 s
+SHAP runtime per sample: 0.377693 s
+LIME total runtime: 14.2553 s
+LIME runtime per sample: 0.142553 s
+
+Key metrics:
+- SHAP feature stability score: 0.19237405106970323
+- LIME feature stability score: 0.7671957671957673
+- SHAP reconstruction error: 0.83645013878438
+- LIME R² mean: 0.1978109575221939
+- SHAP average important features/sample: 9.64
+- LIME average important features/sample: 10.0
+- SHAP vs LIME Pearson correlation: 0.11999525076309087
+- SHAP vs LIME Spearman correlation: 0.4360939361682714
+
+Summary statistics CSV: c:\D\UTS\UTS year 3\Computing Studio 2\explainability\xai_results\dnn\dnn_xai_summary_statistics.csv

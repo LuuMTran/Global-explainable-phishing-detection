@@ -1,0 +1,48 @@
+{
+  "model_name": "random_forest",
+  "model_type": "<class 'sklearn.ensemble._forest.RandomForestClassifier'>",
+  "original_dataset_shape": [
+    132289,
+    292
+  ],
+  "dropped_columns": [
+    "label",
+    "split"
+  ],
+  "shap_samples_used": 300,
+  "lime_samples_used": 100,
+  "threshold_for_sparsity": 0.01,
+  "shap_meta": {
+    "shape": [
+      300,
+      292
+    ],
+    "runtime_seconds": 1022.9132838249207,
+    "runtime_per_sample_seconds": 3.409710946083069,
+    "explainer_type": "TreeExplainer",
+    "mode": "tree",
+    "samples_used": 300,
+    "feature_stats_file": "c:\\D\\UTS\\UTS year 3\\Computing Studio 2\\explainability\\xai_results\\random_forest\\random_forest_shap_feature_statistics.csv",
+    "full_values_file": "c:\\D\\UTS\\UTS year 3\\Computing Studio 2\\explainability\\xai_results\\random_forest\\random_forest_shap_values_full.csv",
+    "local_top_features_file": "c:\\D\\UTS\\UTS year 3\\Computing Studio 2\\explainability\\xai_results\\random_forest\\random_forest_shap_local_top_features_first10.csv"
+  },
+  "lime_meta": {
+    "shape": [
+      100,
+      292
+    ],
+    "runtime_seconds": 86.26178646087646,
+    "runtime_per_sample_seconds": 0.8626178646087647,
+    "prediction_function": "predict_proba",
+    "samples_used": 100,
+    "feature_stats_file": "c:\\D\\UTS\\UTS year 3\\Computing Studio 2\\explainability\\xai_results\\random_forest\\random_forest_lime_feature_statistics.csv",
+    "full_values_file": "c:\\D\\UTS\\UTS year 3\\Computing Studio 2\\explainability\\xai_results\\random_forest\\random_forest_lime_values_full.csv",
+    "local_top_features_file": "c:\\D\\UTS\\UTS year 3\\Computing Studio 2\\explainability\\xai_results\\random_forest\\random_forest_lime_local_top_features_first10.csv"
+  },
+  "comparison_meta": {
+    "global_flattened_correlation": -0.30052495289589,
+    "mean_abs_feature_importance_correlation_pearson": 0.3543587329113157,
+    "mean_abs_feature_importance_correlation_spearman": 0.37736332344259127,
+    "feature_importance_comparison_file": "c:\\D\\UTS\\UTS year 3\\Computing Studio 2\\explainability\\xai_results\\random_forest\\random_forest_shap_lime_feature_importance_comparison.csv"
+  }
+}

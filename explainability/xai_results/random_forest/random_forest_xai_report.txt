@@ -1,0 +1,22 @@
+Explainability Evaluation Report - random_forest
+==================================================
+
+SHAP samples used: 300
+LIME samples used: 100
+
+SHAP total runtime: 1022.9133 s
+SHAP runtime per sample: 3.409711 s
+LIME total runtime: 86.2618 s
+LIME runtime per sample: 0.862618 s
+
+Key metrics:
+- SHAP feature stability score: 0.23126028560811168
+- LIME feature stability score: 0.6676286676286678
+- SHAP reconstruction error: 0.8855768040679677
+- LIME R² mean: 0.48780095240833704
+- SHAP average important features/sample: 16.373333333333335
+- LIME average important features/sample: 10.0
+- SHAP vs LIME Pearson correlation: 0.3543587329113157
+- SHAP vs LIME Spearman correlation: 0.37736332344259127
+
+Summary statistics CSV: c:\D\UTS\UTS year 3\Computing Studio 2\explainability\xai_results\random_forest\random_forest_xai_summary_statistics.csv

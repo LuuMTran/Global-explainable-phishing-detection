@@ -1,0 +1,48 @@
+{
+  "model_name": "dnn",
+  "model_type": "<class 'sklearn.neural_network._multilayer_perceptron.MLPClassifier'>",
+  "original_dataset_shape": [
+    132289,
+    292
+  ],
+  "dropped_columns": [
+    "label",
+    "split"
+  ],
+  "shap_samples_used": 300,
+  "lime_samples_used": 100,
+  "threshold_for_sparsity": 0.01,
+  "shap_meta": {
+    "shape": [
+      300,
+      292
+    ],
+    "runtime_seconds": 113.30777430534363,
+    "runtime_per_sample_seconds": 0.3776925810178121,
+    "explainer_type": "KernelExplainer",
+    "mode": "kernel",
+    "samples_used": 300,
+    "feature_stats_file": "c:\\D\\UTS\\UTS year 3\\Computing Studio 2\\explainability\\xai_results\\dnn\\dnn_shap_feature_statistics.csv",
+    "full_values_file": "c:\\D\\UTS\\UTS year 3\\Computing Studio 2\\explainability\\xai_results\\dnn\\dnn_shap_values_full.csv",
+    "local_top_features_file": "c:\\D\\UTS\\UTS year 3\\Computing Studio 2\\explainability\\xai_results\\dnn\\dnn_shap_local_top_features_first10.csv"
+  },
+  "lime_meta": {
+    "shape": [
+      100,
+      292
+    ],
+    "runtime_seconds": 14.255309343338013,
+    "runtime_per_sample_seconds": 0.14255309343338013,
+    "prediction_function": "predict_proba",
+    "samples_used": 100,
+    "feature_stats_file": "c:\\D\\UTS\\UTS year 3\\Computing Studio 2\\explainability\\xai_results\\dnn\\dnn_lime_feature_statistics.csv",
+    "full_values_file": "c:\\D\\UTS\\UTS year 3\\Computing Studio 2\\explainability\\xai_results\\dnn\\dnn_lime_values_full.csv",
+    "local_top_features_file": "c:\\D\\UTS\\UTS year 3\\Computing Studio 2\\explainability\\xai_results\\dnn\\dnn_lime_local_top_features_first10.csv"
+  },
+  "comparison_meta": {
+    "global_flattened_correlation": -0.10707888337331653,
+    "mean_abs_feature_importance_correlation_pearson": 0.11999525076309087,
+    "mean_abs_feature_importance_correlation_spearman": 0.4360939361682714,
+    "feature_importance_comparison_file": "c:\\D\\UTS\\UTS year 3\\Computing Studio 2\\explainability\\xai_results\\dnn\\dnn_shap_lime_feature_importance_comparison.csv"
+  }
+}
