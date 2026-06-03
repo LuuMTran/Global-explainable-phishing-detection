@@ -1,0 +1,580 @@
+{
+  "experiment": "artifact_3_gaminet_local_only_full_300k",
+  "config": {
+    "variant_name": "local_only_full_300k",
+    "interact_num": 5,
+    "batch_size": 512,
+    "main_effect_epochs": 50,
+    "interaction_epochs": 50,
+    "tuning_epochs": 20,
+    "top_n": 10,
+    "top_n_interactions": 5,
+    "random_state": 42
+  },
+  "teachers": {
+    "random_forest": {
+      "teacher": "random_forest",
+      "teacher_dataset_path": "C:\\Users\\thanh\\OneDrive - UTS\\CSS2\\artifact_3\\surrogates\\surrogate_training_local_only_full_300k_random_forest.csv",
+      "teacher_prediction_source": "cache:C:\\Users\\thanh\\OneDrive - UTS\\CSS2\\artifact_3\\surrogates\\teacher_real_test_predictions_random_forest.npy",
+      "teacher_class_ratio": {
+        "class_0_count": 145572,
+        "class_1_count": 154428,
+        "class_0_ratio": 0.48524,
+        "class_1_ratio": 0.51476
+      },
+      "rows": {
+        "teacher_dataset_total": 300000,
+        "holdout": 90000,
+        "real_test": 26458
+      },
+      "synthetic_holdout_fidelity": {
+        "accuracy": 0.8804222222222222,
+        "precision": 0.8872098593389366,
+        "recall": 0.8795113106544639,
+        "f1": 0.8833438116504434,
+        "confusion_matrix": [
+          [
+            38492,
+            5180
+          ],
+          [
+            5582,
+            40746
+          ]
+        ]
+      },
+      "real_test_fidelity_to_teacher": {
+        "accuracy": 0.8945498525965682,
+        "precision": 0.8969826948676232,
+        "recall": 0.8967174330918232,
+        "f1": 0.8968500443655723,
+        "confusion_matrix": [
+          [
+            11539,
+            1393
+          ],
+          [
+            1397,
+            12129
+          ]
+        ]
+      },
+      "real_test_accuracy_to_true_label": {
+        "accuracy": 0.8710408950034016,
+        "precision": 0.8818222156485727,
+        "recall": 0.8679574901732421,
+        "f1": 0.8748349229640499,
+        "confusion_matrix": [
+          [
+            11122,
+            1598
+          ],
+          [
+            1814,
+            11924
+          ]
+        ]
+      },
+      "error_fidelity": {
+        "teacher_misclassified_count": 1500,
+        "teacher_misclassified_rate": 0.056693627636253685,
+        "misclassified_fidelity": {
+          "subset_name": "teacher_misclassified",
+          "row_count": 1500,
+          "share_of_test_set": 0.056693627636253685,
+          "fidelity_to_reference": {
+            "accuracy": 0.7073333333333334,
+            "precision": 0.6532137518684604,
+            "recall": 0.6785714285714286,
+            "f1": 0.6656511805026657,
+            "confusion_matrix": [
+              [
+                624,
+                232
+              ],
+              [
+                207,
+                437
+              ]
+            ]
+          },
+          "peer_vs_true_label": {
+            "accuracy": 0.2926666666666667,
+            "precision": 0.34678624813153963,
+            "recall": 0.27102803738317754,
+            "f1": 0.3042622950819672,
+            "confusion_matrix": [
+              [
+                207,
+                437
+              ],
+              [
+                624,
+                232
+              ]
+            ]
+          },
+          "peer_matches_reference_count": 1061,
+          "peer_matches_reference_rate": 0.7073333333333334,
+          "peer_matches_true_label_count": 439,
+          "peer_matches_true_label_rate": 0.2926666666666667
+        },
+        "teacher_false_positive_subset": {
+          "subset_name": "teacher_false_positives",
+          "row_count": 644,
+          "share_of_test_set": 0.024340464131831583,
+          "fidelity_to_reference": {
+            "accuracy": 0.6785714285714286,
+            "precision": 1.0,
+            "recall": 0.6785714285714286,
+            "f1": 0.8085106382978724,
+            "confusion_matrix": [
+              [
+                0,
+                0
+              ],
+              [
+                207,
+                437
+              ]
+            ]
+          },
+          "peer_vs_true_label": {
+            "accuracy": 0.32142857142857145,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "confusion_matrix": [
+              [
+                207,
+                437
+              ],
+              [
+                0,
+                0
+              ]
+            ]
+          },
+          "peer_matches_reference_count": 437,
+          "peer_matches_reference_rate": 0.6785714285714286,
+          "peer_matches_true_label_count": 207,
+          "peer_matches_true_label_rate": 0.32142857142857145
+        },
+        "teacher_false_negative_subset": {
+          "subset_name": "teacher_false_negatives",
+          "row_count": 856,
+          "share_of_test_set": 0.032353163504422106,
+          "fidelity_to_reference": {
+            "accuracy": 0.7289719626168224,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "confusion_matrix": [
+              [
+                624,
+                232
+              ],
+              [
+                0,
+                0
+              ]
+            ]
+          },
+          "peer_vs_true_label": {
+            "accuracy": 0.27102803738317754,
+            "precision": 1.0,
+            "recall": 0.27102803738317754,
+            "f1": 0.4264705882352941,
+            "confusion_matrix": [
+              [
+                0,
+                0
+              ],
+              [
+                624,
+                232
+              ]
+            ]
+          },
+          "peer_matches_reference_count": 624,
+          "peer_matches_reference_rate": 0.7289719626168224,
+          "peer_matches_true_label_count": 232,
+          "peer_matches_true_label_rate": 0.27102803738317754
+        }
+      },
+      "plot_summary": {
+        "main_effect_count": 292,
+        "interaction_count": 5,
+        "top_main": [
+          [
+            "url_query_count",
+            0.5622630192495344
+          ],
+          [
+            "body_len",
+            0.05375518505561022
+          ],
+          [
+            "max_url_path_depth",
+            0.04616943963747623
+          ],
+          [
+            "body_word_count",
+            0.026585444196369563
+          ],
+          [
+            "url_tld=.hk",
+            0.024549798498714605
+          ],
+          [
+            "body_exclamation_count",
+            0.023781446768111156
+          ],
+          [
+            "url_tld=.ch",
+            0.02097784981150607
+          ],
+          [
+            "url_tld=.org",
+            0.018745386497365533
+          ],
+          [
+            "body_email_address_count",
+            0.018558288129090376
+          ],
+          [
+            "url_tld=.edu",
+            0.01563105478025155
+          ]
+        ],
+        "top_interactions": [
+          [
+            "subject_len x body_upper_ratio",
+            0.0023783058240482106
+          ],
+          [
+            "subject_upper_ratio x click_here_count",
+            0.001012982041209522
+          ],
+          [
+            "subject_len x subject_upper_ratio",
+            0.000954329896587701
+          ],
+          [
+            "body_question_count x subject_upper_ratio",
+            1.4512904877441835e-06
+          ],
+          [
+            "body_question_count x body_upper_ratio",
+            1.5369553525763869e-07
+          ]
+        ],
+        "saved_main_paths": [
+          "C:\\Users\\thanh\\OneDrive - UTS\\CSS2\\artifact_3\\surrogates\\gaminet_local_only_full_300k_random_forest_artifacts\\main_effect_terms\\gaminet_main_effect_top_01_url_query_count.png",
+          "C:\\Users\\thanh\\OneDrive - UTS\\CSS2\\artifact_3\\surrogates\\gaminet_local_only_full_300k_random_forest_artifacts\\main_effect_terms\\gaminet_main_effect_top_02_body_len.png",
+          "C:\\Users\\thanh\\OneDrive - UTS\\CSS2\\artifact_3\\surrogates\\gaminet_local_only_full_300k_random_forest_artifacts\\main_effect_terms\\gaminet_main_effect_top_03_max_url_path_depth.png",
+          "C:\\Users\\thanh\\OneDrive - UTS\\CSS2\\artifact_3\\surrogates\\gaminet_local_only_full_300k_random_forest_artifacts\\main_effect_terms\\gaminet_main_effect_top_04_body_word_count.png",
+          "C:\\Users\\thanh\\OneDrive - UTS\\CSS2\\artifact_3\\surrogates\\gaminet_local_only_full_300k_random_forest_artifacts\\main_effect_terms\\gaminet_main_effect_top_05_url_tld_.hk.png",
+          "C:\\Users\\thanh\\OneDrive - UTS\\CSS2\\artifact_3\\surrogates\\gaminet_local_only_full_300k_random_forest_artifacts\\main_effect_terms\\gaminet_main_effect_top_06_body_exclamation_count.png",
+          "C:\\Users\\thanh\\OneDrive - UTS\\CSS2\\artifact_3\\surrogates\\gaminet_local_only_full_300k_random_forest_artifacts\\main_effect_terms\\gaminet_main_effect_top_07_url_tld_.ch.png",
+          "C:\\Users\\thanh\\OneDrive - UTS\\CSS2\\artifact_3\\surrogates\\gaminet_local_only_full_300k_random_forest_artifacts\\main_effect_terms\\gaminet_main_effect_top_08_url_tld_.org.png",
+          "C:\\Users\\thanh\\OneDrive - UTS\\CSS2\\artifact_3\\surrogates\\gaminet_local_only_full_300k_random_forest_artifacts\\main_effect_terms\\gaminet_main_effect_top_09_body_email_address_count.png",
+          "C:\\Users\\thanh\\OneDrive - UTS\\CSS2\\artifact_3\\surrogates\\gaminet_local_only_full_300k_random_forest_artifacts\\main_effect_terms\\gaminet_main_effect_top_10_url_tld_.edu.png"
+        ],
+        "saved_interaction_paths": [
+          "C:\\Users\\thanh\\OneDrive - UTS\\CSS2\\artifact_3\\surrogates\\gaminet_local_only_full_300k_random_forest_artifacts\\interaction_terms\\gaminet_interaction_top_01_subject_len_x_body_upper_ratio.png",
+          "C:\\Users\\thanh\\OneDrive - UTS\\CSS2\\artifact_3\\surrogates\\gaminet_local_only_full_300k_random_forest_artifacts\\interaction_terms\\gaminet_interaction_top_02_subject_upper_ratio_x_click_here_count.png",
+          "C:\\Users\\thanh\\OneDrive - UTS\\CSS2\\artifact_3\\surrogates\\gaminet_local_only_full_300k_random_forest_artifacts\\interaction_terms\\gaminet_interaction_top_03_subject_len_x_subject_upper_ratio.png",
+          "C:\\Users\\thanh\\OneDrive - UTS\\CSS2\\artifact_3\\surrogates\\gaminet_local_only_full_300k_random_forest_artifacts\\interaction_terms\\gaminet_interaction_top_04_body_question_count_x_subject_upper_ratio.png",
+          "C:\\Users\\thanh\\OneDrive - UTS\\CSS2\\artifact_3\\surrogates\\gaminet_local_only_full_300k_random_forest_artifacts\\interaction_terms\\gaminet_interaction_top_05_body_question_count_x_body_upper_ratio.png"
+        ]
+      },
+      "artifacts": {
+        "model_pickle": "C:\\Users\\thanh\\OneDrive - UTS\\CSS2\\artifact_3\\surrogates\\gaminet_local_only_full_300k_random_forest_artifacts\\gaminet_local_only_full_300k_random_forest.pickle",
+        "output_dir": "C:\\Users\\thanh\\OneDrive - UTS\\CSS2\\artifact_3\\surrogates\\gaminet_local_only_full_300k_random_forest_artifacts"
+      }
+    },
+    "deep_neural_net": {
+      "teacher": "deep_neural_net",
+      "teacher_dataset_path": "C:\\Users\\thanh\\OneDrive - UTS\\CSS2\\artifact_3\\surrogates\\surrogate_training_local_only_full_300k_deep_neural_net.csv",
+      "teacher_prediction_source": "cache:C:\\Users\\thanh\\OneDrive - UTS\\CSS2\\artifact_3\\surrogates\\teacher_real_test_predictions_deep_neural_net.npy",
+      "teacher_class_ratio": {
+        "class_0_count": 144034,
+        "class_1_count": 155966,
+        "class_0_ratio": 0.48011333333333334,
+        "class_1_ratio": 0.5198866666666667
+      },
+      "rows": {
+        "teacher_dataset_total": 300000,
+        "holdout": 90000,
+        "real_test": 26458
+      },
+      "synthetic_holdout_fidelity": {
+        "accuracy": 0.9132444444444444,
+        "precision": 0.9022578115325877,
+        "recall": 0.9343449455011754,
+        "f1": 0.9180210826928731,
+        "confusion_matrix": [
+          [
+            38474,
+            4736
+          ],
+          [
+            3072,
+            43718
+          ]
+        ]
+      },
+      "real_test_fidelity_to_teacher": {
+        "accuracy": 0.9135989114823494,
+        "precision": 0.9021556550951848,
+        "recall": 0.9355494266221512,
+        "f1": 0.9185491341837099,
+        "confusion_matrix": [
+          [
+            11282,
+            1398
+          ],
+          [
+            888,
+            12890
+          ]
+        ]
+      },
+      "real_test_accuracy_to_true_label": {
+        "accuracy": 0.8679416433592864,
+        "precision": 0.8584826427771557,
+        "recall": 0.8928519435143398,
+        "f1": 0.8753300506672377,
+        "confusion_matrix": [
+          [
+            10698,
+            2022
+          ],
+          [
+            1472,
+            12266
+          ]
+        ]
+      },
+      "error_fidelity": {
+        "teacher_misclassified_count": 2252,
+        "teacher_misclassified_rate": 0.08511603295789553,
+        "misclassified_fidelity": {
+          "subset_name": "teacher_misclassified",
+          "row_count": 2252,
+          "share_of_test_set": 0.08511603295789553,
+          "fidelity_to_reference": {
+            "accuracy": 0.7682060390763765,
+            "precision": 0.7520193861066236,
+            "recall": 0.81239092495637,
+            "f1": 0.7810402684563758,
+            "confusion_matrix": [
+              [
+                799,
+                307
+              ],
+              [
+                215,
+                931
+              ]
+            ]
+          },
+          "peer_vs_true_label": {
+            "accuracy": 0.23179396092362345,
+            "precision": 0.24798061389337642,
+            "recall": 0.27757685352622063,
+            "f1": 0.2619453924914676,
+            "confusion_matrix": [
+              [
+                215,
+                931
+              ],
+              [
+                799,
+                307
+              ]
+            ]
+          },
+          "peer_matches_reference_count": 1730,
+          "peer_matches_reference_rate": 0.7682060390763765,
+          "peer_matches_true_label_count": 522,
+          "peer_matches_true_label_rate": 0.23179396092362345
+        },
+        "teacher_false_positive_subset": {
+          "subset_name": "teacher_false_positives",
+          "row_count": 1146,
+          "share_of_test_set": 0.04331393151409781,
+          "fidelity_to_reference": {
+            "accuracy": 0.81239092495637,
+            "precision": 1.0,
+            "recall": 0.81239092495637,
+            "f1": 0.8964853153586905,
+            "confusion_matrix": [
+              [
+                0,
+                0
+              ],
+              [
+                215,
+                931
+              ]
+            ]
+          },
+          "peer_vs_true_label": {
+            "accuracy": 0.18760907504363003,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "confusion_matrix": [
+              [
+                215,
+                931
+              ],
+              [
+                0,
+                0
+              ]
+            ]
+          },
+          "peer_matches_reference_count": 931,
+          "peer_matches_reference_rate": 0.81239092495637,
+          "peer_matches_true_label_count": 215,
+          "peer_matches_true_label_rate": 0.18760907504363003
+        },
+        "teacher_false_negative_subset": {
+          "subset_name": "teacher_false_negatives",
+          "row_count": 1106,
+          "share_of_test_set": 0.041802101443797715,
+          "fidelity_to_reference": {
+            "accuracy": 0.7224231464737794,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "confusion_matrix": [
+              [
+                799,
+                307
+              ],
+              [
+                0,
+                0
+              ]
+            ]
+          },
+          "peer_vs_true_label": {
+            "accuracy": 0.27757685352622063,
+            "precision": 1.0,
+            "recall": 0.27757685352622063,
+            "f1": 0.43453644727530083,
+            "confusion_matrix": [
+              [
+                0,
+                0
+              ],
+              [
+                799,
+                307
+              ]
+            ]
+          },
+          "peer_matches_reference_count": 799,
+          "peer_matches_reference_rate": 0.7224231464737794,
+          "peer_matches_true_label_count": 307,
+          "peer_matches_true_label_rate": 0.27757685352622063
+        }
+      },
+      "plot_summary": {
+        "main_effect_count": 292,
+        "interaction_count": 5,
+        "top_main": [
+          [
+            "body_len",
+            0.2243277699802444
+          ],
+          [
+            "url_query_count",
+            0.11338527788637229
+          ],
+          [
+            "body_word_count",
+            0.09585648659862932
+          ],
+          [
+            "max_url_path_depth",
+            0.06101216487256634
+          ],
+          [
+            "body_exclamation_count",
+            0.038745594001570974
+          ],
+          [
+            "url_tld=.hk",
+            0.03437395314995614
+          ],
+          [
+            "subject_question_count",
+            0.027802691327513642
+          ],
+          [
+            "body_email_address_count",
+            0.025717943704019783
+          ],
+          [
+            "url_scheme=http",
+            0.02475685744719492
+          ],
+          [
+            "url_tld=.org",
+            0.02362589385039385
+          ]
+        ],
+        "top_interactions": [
+          [
+            "subject_len x subject_upper_ratio",
+            0.0034347868472958164
+          ],
+          [
+            "subject_len x body_upper_ratio",
+            0.0029660452923618414
+          ],
+          [
+            "body_exclamation_count x body_upper_ratio",
+            0.0022862976190405324
+          ],
+          [
+            "body_question_count x body_upper_ratio",
+            0.0015744550950770907
+          ],
+          [
+            "subject_word_count x body_upper_ratio",
+            4.310616219981887e-08
+          ]
+        ],
+        "saved_main_paths": [
+          "C:\\Users\\thanh\\OneDrive - UTS\\CSS2\\artifact_3\\surrogates\\gaminet_local_only_full_300k_deep_neural_net_artifacts\\main_effect_terms\\gaminet_main_effect_top_01_body_len.png",
+          "C:\\Users\\thanh\\OneDrive - UTS\\CSS2\\artifact_3\\surrogates\\gaminet_local_only_full_300k_deep_neural_net_artifacts\\main_effect_terms\\gaminet_main_effect_top_02_url_query_count.png",
+          "C:\\Users\\thanh\\OneDrive - UTS\\CSS2\\artifact_3\\surrogates\\gaminet_local_only_full_300k_deep_neural_net_artifacts\\main_effect_terms\\gaminet_main_effect_top_03_body_word_count.png",
+          "C:\\Users\\thanh\\OneDrive - UTS\\CSS2\\artifact_3\\surrogates\\gaminet_local_only_full_300k_deep_neural_net_artifacts\\main_effect_terms\\gaminet_main_effect_top_04_max_url_path_depth.png",
+          "C:\\Users\\thanh\\OneDrive - UTS\\CSS2\\artifact_3\\surrogates\\gaminet_local_only_full_300k_deep_neural_net_artifacts\\main_effect_terms\\gaminet_main_effect_top_05_body_exclamation_count.png",
+          "C:\\Users\\thanh\\OneDrive - UTS\\CSS2\\artifact_3\\surrogates\\gaminet_local_only_full_300k_deep_neural_net_artifacts\\main_effect_terms\\gaminet_main_effect_top_06_url_tld_.hk.png",
+          "C:\\Users\\thanh\\OneDrive - UTS\\CSS2\\artifact_3\\surrogates\\gaminet_local_only_full_300k_deep_neural_net_artifacts\\main_effect_terms\\gaminet_main_effect_top_07_subject_question_count.png",
+          "C:\\Users\\thanh\\OneDrive - UTS\\CSS2\\artifact_3\\surrogates\\gaminet_local_only_full_300k_deep_neural_net_artifacts\\main_effect_terms\\gaminet_main_effect_top_08_body_email_address_count.png",
+          "C:\\Users\\thanh\\OneDrive - UTS\\CSS2\\artifact_3\\surrogates\\gaminet_local_only_full_300k_deep_neural_net_artifacts\\main_effect_terms\\gaminet_main_effect_top_09_url_scheme_http.png",
+          "C:\\Users\\thanh\\OneDrive - UTS\\CSS2\\artifact_3\\surrogates\\gaminet_local_only_full_300k_deep_neural_net_artifacts\\main_effect_terms\\gaminet_main_effect_top_10_url_tld_.org.png"
+        ],
+        "saved_interaction_paths": [
+          "C:\\Users\\thanh\\OneDrive - UTS\\CSS2\\artifact_3\\surrogates\\gaminet_local_only_full_300k_deep_neural_net_artifacts\\interaction_terms\\gaminet_interaction_top_01_subject_len_x_subject_upper_ratio.png",
+          "C:\\Users\\thanh\\OneDrive - UTS\\CSS2\\artifact_3\\surrogates\\gaminet_local_only_full_300k_deep_neural_net_artifacts\\interaction_terms\\gaminet_interaction_top_02_subject_len_x_body_upper_ratio.png",
+          "C:\\Users\\thanh\\OneDrive - UTS\\CSS2\\artifact_3\\surrogates\\gaminet_local_only_full_300k_deep_neural_net_artifacts\\interaction_terms\\gaminet_interaction_top_03_body_exclamation_count_x_body_upper_ratio.png",
+          "C:\\Users\\thanh\\OneDrive - UTS\\CSS2\\artifact_3\\surrogates\\gaminet_local_only_full_300k_deep_neural_net_artifacts\\interaction_terms\\gaminet_interaction_top_04_body_question_count_x_body_upper_ratio.png",
+          "C:\\Users\\thanh\\OneDrive - UTS\\CSS2\\artifact_3\\surrogates\\gaminet_local_only_full_300k_deep_neural_net_artifacts\\interaction_terms\\gaminet_interaction_top_05_subject_word_count_x_body_upper_ratio.png"
+        ]
+      },
+      "artifacts": {
+        "model_pickle": "C:\\Users\\thanh\\OneDrive - UTS\\CSS2\\artifact_3\\surrogates\\gaminet_local_only_full_300k_deep_neural_net_artifacts\\gaminet_local_only_full_300k_deep_neural_net.pickle",
+        "output_dir": "C:\\Users\\thanh\\OneDrive - UTS\\CSS2\\artifact_3\\surrogates\\gaminet_local_only_full_300k_deep_neural_net_artifacts"
+      }
+    }
+  }
+}

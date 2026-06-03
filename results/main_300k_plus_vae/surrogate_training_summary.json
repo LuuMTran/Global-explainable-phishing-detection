@@ -1,0 +1,50 @@
+{
+  "config": {
+    "random_state": 42,
+    "vae_sample_size": 100000,
+    "synthetic_total_rows": null,
+    "feature_count": 292,
+    "ebm_interactions": 25,
+    "ebm_max_interaction_bins": 64
+  },
+  "teachers": {
+    "deep_neural_net": {
+      "class_ratio": {
+        "class_0_count": 207322,
+        "class_1_count": 192678,
+        "class_0_ratio": 0.518305,
+        "class_1_ratio": 0.481695
+      },
+      "teacher_dataset_path": "C:\\Users\\thanh\\OneDrive - UTS\\CSS2\\artifacts\\surrogates\\surrogate_training_deep_neural_net.csv",
+      "surrogates": {
+        "ebm": {
+          "primary_seed": 42,
+          "synthetic_holdout_fidelity": {
+            "accuracy": 0.9319333333333333,
+            "precision": 0.9364590844339705,
+            "recall": 0.9211978617026798,
+            "f1": 0.9287657852508198
+          },
+          "real_test_fidelity_to_teacher": {
+            "accuracy": 0.9401693249678736,
+            "precision": 0.9437449967251291,
+            "recall": 0.9412106256350704,
+            "f1": 0.942476107416694
+          },
+          "real_test_accuracy_to_true_label": {
+            "accuracy": 0.8942852823342656,
+            "precision": 0.8981151299032094,
+            "recall": 0.898311253457563,
+            "f1": 0.8982131809745624
+          },
+          "stability": {
+            "teacher_fidelity_accuracy_gap_holdout_vs_real": 0.008235991634540363,
+            "teacher_fidelity_f1_gap_holdout_vs_real": 0.0137103221658742,
+            "true_accuracy_gap_holdout_vs_real": 0.03764805099906765
+          },
+          "model_path": "C:\\Users\\thanh\\OneDrive - UTS\\CSS2\\artifacts\\surrogates\\ebm_deep_neural_net.pkl"
+        }
+      }
+    }
+  }
+}

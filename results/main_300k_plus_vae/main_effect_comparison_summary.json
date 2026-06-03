@@ -1,0 +1,102 @@
+{
+  "experiment": "compare_main_effect_plots_300k_plus_vae",
+  "teachers": {
+    "random_forest": {
+      "teacher": "random_forest",
+      "common_top10_features": [
+        "primary_url_subdomain_depth",
+        "max_url_path_depth",
+        "body_exclamation_count",
+        "body_digit_count",
+        "max_url_len",
+        "body_email_address_count"
+      ],
+      "selected_top5_by_ebm_importance": [
+        {
+          "feature": "primary_url_subdomain_depth",
+          "ebm_importance": 0.961918019431,
+          "gaminet_importance": 0.0481556297395,
+          "ebm_plot_path": "C:\\Users\\thanh\\OneDrive - UTS\\CSS2\\artifacts\\surrogates\\ebm_plots_random_forest\\main_effect_terms\\ebm_main_effect_top_01_primary_url_subdomain_depth.png",
+          "gaminet_plot_path": "C:\\Users\\thanh\\OneDrive - UTS\\CSS2\\artifacts\\surrogates\\gaminet_random_forest_artifacts\\main_effect_terms\\gaminet_main_effect_top_06_primary_url_subdomain_depth.png"
+        },
+        {
+          "feature": "max_url_path_depth",
+          "ebm_importance": 0.933397224376,
+          "gaminet_importance": 0.0744197708613,
+          "ebm_plot_path": "C:\\Users\\thanh\\OneDrive - UTS\\CSS2\\artifacts\\surrogates\\ebm_plots_random_forest\\main_effect_terms\\ebm_main_effect_top_02_max_url_path_depth.png",
+          "gaminet_plot_path": "C:\\Users\\thanh\\OneDrive - UTS\\CSS2\\artifacts\\surrogates\\gaminet_random_forest_artifacts\\main_effect_terms\\gaminet_main_effect_top_02_max_url_path_depth.png"
+        },
+        {
+          "feature": "body_exclamation_count",
+          "ebm_importance": 0.904502226282,
+          "gaminet_importance": 0.0478032089347,
+          "ebm_plot_path": "C:\\Users\\thanh\\OneDrive - UTS\\CSS2\\artifacts\\surrogates\\ebm_plots_random_forest\\main_effect_terms\\ebm_main_effect_top_03_body_exclamation_count.png",
+          "gaminet_plot_path": "C:\\Users\\thanh\\OneDrive - UTS\\CSS2\\artifacts\\surrogates\\gaminet_random_forest_artifacts\\main_effect_terms\\gaminet_main_effect_top_07_body_exclamation_count.png"
+        },
+        {
+          "feature": "body_digit_count",
+          "ebm_importance": 0.895662489628,
+          "gaminet_importance": 0.0364373729652,
+          "ebm_plot_path": "C:\\Users\\thanh\\OneDrive - UTS\\CSS2\\artifacts\\surrogates\\ebm_plots_random_forest\\main_effect_terms\\ebm_main_effect_top_04_body_digit_count.png",
+          "gaminet_plot_path": "C:\\Users\\thanh\\OneDrive - UTS\\CSS2\\artifacts\\surrogates\\gaminet_random_forest_artifacts\\main_effect_terms\\gaminet_main_effect_top_09_body_digit_count.png"
+        },
+        {
+          "feature": "max_url_len",
+          "ebm_importance": 0.797722114816,
+          "gaminet_importance": 0.0598675128789,
+          "ebm_plot_path": "C:\\Users\\thanh\\OneDrive - UTS\\CSS2\\artifacts\\surrogates\\ebm_plots_random_forest\\main_effect_terms\\ebm_main_effect_top_05_max_url_len.png",
+          "gaminet_plot_path": "C:\\Users\\thanh\\OneDrive - UTS\\CSS2\\artifacts\\surrogates\\gaminet_random_forest_artifacts\\main_effect_terms\\gaminet_main_effect_top_04_max_url_len.png"
+        }
+      ],
+      "comparison_plot_path": "C:\\Users\\thanh\\OneDrive - UTS\\CSS2\\artifacts\\surrogates\\main_effect_comparisons_300k_plus_vae\\random_forest_ebm_vs_gaminet_common_top5_main_effects.png"
+    },
+    "deep_neural_net": {
+      "teacher": "deep_neural_net",
+      "common_top10_features": [
+        "body_word_count",
+        "primary_url_subdomain_depth",
+        "body_len",
+        "body_exclamation_count",
+        "max_url_path_depth"
+      ],
+      "selected_top5_by_ebm_importance": [
+        {
+          "feature": "body_word_count",
+          "ebm_importance": 1.67369565048,
+          "gaminet_importance": 0.103612340071,
+          "ebm_plot_path": "C:\\Users\\thanh\\OneDrive - UTS\\CSS2\\artifacts\\surrogates\\ebm_plots_deep_neural_net\\main_effect_terms\\ebm_main_effect_top_01_body_word_count.png",
+          "gaminet_plot_path": "C:\\Users\\thanh\\OneDrive - UTS\\CSS2\\artifacts\\surrogates\\gaminet_deep_neural_net_artifacts\\main_effect_terms\\gaminet_main_effect_top_02_body_word_count.png"
+        },
+        {
+          "feature": "primary_url_subdomain_depth",
+          "ebm_importance": 1.55740860488,
+          "gaminet_importance": 0.0786117385683,
+          "ebm_plot_path": "C:\\Users\\thanh\\OneDrive - UTS\\CSS2\\artifacts\\surrogates\\ebm_plots_deep_neural_net\\main_effect_terms\\ebm_main_effect_top_02_primary_url_subdomain_depth.png",
+          "gaminet_plot_path": "C:\\Users\\thanh\\OneDrive - UTS\\CSS2\\artifacts\\surrogates\\gaminet_deep_neural_net_artifacts\\main_effect_terms\\gaminet_main_effect_top_03_primary_url_subdomain_depth.png"
+        },
+        {
+          "feature": "body_len",
+          "ebm_importance": 1.27003252476,
+          "gaminet_importance": 0.211496260109,
+          "ebm_plot_path": "C:\\Users\\thanh\\OneDrive - UTS\\CSS2\\artifacts\\surrogates\\ebm_plots_deep_neural_net\\main_effect_terms\\ebm_main_effect_top_03_body_len.png",
+          "gaminet_plot_path": "C:\\Users\\thanh\\OneDrive - UTS\\CSS2\\artifacts\\surrogates\\gaminet_deep_neural_net_artifacts\\main_effect_terms\\gaminet_main_effect_top_01_body_len.png"
+        },
+        {
+          "feature": "body_exclamation_count",
+          "ebm_importance": 1.23038152255,
+          "gaminet_importance": 0.0334488046526,
+          "ebm_plot_path": "C:\\Users\\thanh\\OneDrive - UTS\\CSS2\\artifacts\\surrogates\\ebm_plots_deep_neural_net\\main_effect_terms\\ebm_main_effect_top_04_body_exclamation_count.png",
+          "gaminet_plot_path": "C:\\Users\\thanh\\OneDrive - UTS\\CSS2\\artifacts\\surrogates\\gaminet_deep_neural_net_artifacts\\main_effect_terms\\gaminet_main_effect_top_08_body_exclamation_count.png"
+        },
+        {
+          "feature": "max_url_path_depth",
+          "ebm_importance": 1.09984781203,
+          "gaminet_importance": 0.0495693634267,
+          "ebm_plot_path": "C:\\Users\\thanh\\OneDrive - UTS\\CSS2\\artifacts\\surrogates\\ebm_plots_deep_neural_net\\main_effect_terms\\ebm_main_effect_top_05_max_url_path_depth.png",
+          "gaminet_plot_path": "C:\\Users\\thanh\\OneDrive - UTS\\CSS2\\artifacts\\surrogates\\gaminet_deep_neural_net_artifacts\\main_effect_terms\\gaminet_main_effect_top_05_max_url_path_depth.png"
+        }
+      ],
+      "comparison_plot_path": "C:\\Users\\thanh\\OneDrive - UTS\\CSS2\\artifacts\\surrogates\\main_effect_comparisons_300k_plus_vae\\deep_neural_net_ebm_vs_gaminet_common_top5_main_effects.png"
+    }
+  }
+}

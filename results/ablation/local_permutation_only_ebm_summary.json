@@ -1,0 +1,418 @@
+{
+  "experiment": "artifact_2_ebm_local_only_full_i0",
+  "config": {
+    "variant_name": "local_only_full_i0",
+    "dataset_mode": "local_only",
+    "random_state": 42,
+    "ebm_interactions": 0,
+    "ebm_max_interaction_bins": 64,
+    "top_n": 10,
+    "top_n_interactions": 5,
+    "vae_sample_size": 0,
+    "max_rows": null
+  },
+  "data_mix": {
+    "dataset_mode": "local_only",
+    "local_path": "C:\\Users\\thanh\\OneDrive - UTS\\CSS2\\artifacts\\synthetic_local_permutation_300k.csv",
+    "local_rows": 300000,
+    "vae_path": null,
+    "vae_total_rows": 0,
+    "vae_sample_rows": 0,
+    "combined_rows": 300000,
+    "feature_count": 292,
+    "sampled_combined_rows": 300000,
+    "requested_max_rows": null
+  },
+  "teachers": {
+    "random_forest": {
+      "teacher": "random_forest",
+      "teacher_dataset_path": "C:\\Users\\thanh\\OneDrive - UTS\\CSS2\\artifact_2\\surrogates\\surrogate_training_local_only_full_i0_random_forest.csv",
+      "teacher_prediction_source": "cache:C:\\Users\\thanh\\OneDrive - UTS\\CSS2\\artifact_2\\surrogates\\teacher_real_test_predictions_random_forest.npy",
+      "teacher_class_ratio": {
+        "class_0_count": 145572,
+        "class_1_count": 154428,
+        "class_0_ratio": 0.48524,
+        "class_1_ratio": 0.51476
+      },
+      "rows": {
+        "teacher_dataset_total": 300000,
+        "holdout": 90000,
+        "real_test": 26458
+      },
+      "synthetic_holdout_fidelity": {
+        "accuracy": 0.9025111111111112,
+        "precision": 0.9003454010489957,
+        "recall": 0.9115006043861164,
+        "f1": 0.9058886624477099,
+        "confusion_matrix": [
+          [
+            38998,
+            4674
+          ],
+          [
+            4100,
+            42228
+          ]
+        ]
+      },
+      "real_test_fidelity_to_teacher": {
+        "accuracy": 0.9182099931967647,
+        "precision": 0.9110114310519462,
+        "recall": 0.9309478042288925,
+        "f1": 0.9208717273658037,
+        "confusion_matrix": [
+          [
+            11702,
+            1230
+          ],
+          [
+            934,
+            12592
+          ]
+        ]
+      },
+      "real_test_accuracy_to_true_label": {
+        "accuracy": 0.893491571547358,
+        "precision": 0.8950224280133121,
+        "recall": 0.9004949774348522,
+        "f1": 0.8977503628447024,
+        "confusion_matrix": [
+          [
+            11269,
+            1451
+          ],
+          [
+            1367,
+            12371
+          ]
+        ]
+      },
+      "error_fidelity": {
+        "teacher_misclassified_count": 1500,
+        "teacher_misclassified_rate": 0.056693627636253685,
+        "misclassified_fidelity": {
+          "subset_name": "teacher_misclassified",
+          "row_count": 1500,
+          "share_of_test_set": 0.056693627636253685,
+          "fidelity_to_reference": {
+            "accuracy": 0.718,
+            "precision": 0.6429495472186287,
+            "recall": 0.7717391304347826,
+            "f1": 0.7014820042342979,
+            "confusion_matrix": [
+              [
+                580,
+                276
+              ],
+              [
+                147,
+                497
+              ]
+            ]
+          },
+          "peer_vs_true_label": {
+            "accuracy": 0.282,
+            "precision": 0.35705045278137126,
+            "recall": 0.32242990654205606,
+            "f1": 0.3388581952117864,
+            "confusion_matrix": [
+              [
+                147,
+                497
+              ],
+              [
+                580,
+                276
+              ]
+            ]
+          },
+          "peer_matches_reference_count": 1077,
+          "peer_matches_reference_rate": 0.718,
+          "peer_matches_true_label_count": 423,
+          "peer_matches_true_label_rate": 0.282
+        },
+        "teacher_false_positive_subset": {
+          "subset_name": "teacher_false_positives",
+          "row_count": 644,
+          "share_of_test_set": 0.024340464131831583,
+          "fidelity_to_reference": {
+            "accuracy": 0.7717391304347826,
+            "precision": 1.0,
+            "recall": 0.7717391304347826,
+            "f1": 0.8711656441717791,
+            "confusion_matrix": [
+              [
+                0,
+                0
+              ],
+              [
+                147,
+                497
+              ]
+            ]
+          },
+          "peer_vs_true_label": {
+            "accuracy": 0.22826086956521738,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "confusion_matrix": [
+              [
+                147,
+                497
+              ],
+              [
+                0,
+                0
+              ]
+            ]
+          },
+          "peer_matches_reference_count": 497,
+          "peer_matches_reference_rate": 0.7717391304347826,
+          "peer_matches_true_label_count": 147,
+          "peer_matches_true_label_rate": 0.22826086956521738
+        },
+        "teacher_false_negative_subset": {
+          "subset_name": "teacher_false_negatives",
+          "row_count": 856,
+          "share_of_test_set": 0.032353163504422106,
+          "fidelity_to_reference": {
+            "accuracy": 0.677570093457944,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "confusion_matrix": [
+              [
+                580,
+                276
+              ],
+              [
+                0,
+                0
+              ]
+            ]
+          },
+          "peer_vs_true_label": {
+            "accuracy": 0.32242990654205606,
+            "precision": 1.0,
+            "recall": 0.32242990654205606,
+            "f1": 0.4876325088339223,
+            "confusion_matrix": [
+              [
+                0,
+                0
+              ],
+              [
+                580,
+                276
+              ]
+            ]
+          },
+          "peer_matches_reference_count": 580,
+          "peer_matches_reference_rate": 0.677570093457944,
+          "peer_matches_true_label_count": 276,
+          "peer_matches_true_label_rate": 0.32242990654205606
+        }
+      },
+      "artifacts": {
+        "model_path": "C:\\Users\\thanh\\OneDrive - UTS\\CSS2\\artifact_2\\surrogates\\ebm_local_only_full_i0_random_forest.pkl",
+        "plot_dir": "C:\\Users\\thanh\\OneDrive - UTS\\CSS2\\artifact_2\\surrogates\\ebm_plots_local_only_full_i0_random_forest"
+      }
+    },
+    "deep_neural_net": {
+      "teacher": "deep_neural_net",
+      "teacher_dataset_path": "C:\\Users\\thanh\\OneDrive - UTS\\CSS2\\artifact_2\\surrogates\\surrogate_training_local_only_full_i0_deep_neural_net.csv",
+      "teacher_prediction_source": "cache:C:\\Users\\thanh\\OneDrive - UTS\\CSS2\\artifact_2\\surrogates\\teacher_real_test_predictions_deep_neural_net.npy",
+      "teacher_class_ratio": {
+        "class_0_count": 144034,
+        "class_1_count": 155966,
+        "class_0_ratio": 0.48011333333333334,
+        "class_1_ratio": 0.5198866666666667
+      },
+      "rows": {
+        "teacher_dataset_total": 300000,
+        "holdout": 90000,
+        "real_test": 26458
+      },
+      "synthetic_holdout_fidelity": {
+        "accuracy": 0.9256555555555556,
+        "precision": 0.9278321917077439,
+        "recall": 0.9292797606326139,
+        "f1": 0.9285554119996156,
+        "confusion_matrix": [
+          [
+            39828,
+            3382
+          ],
+          [
+            3309,
+            43481
+          ]
+        ]
+      },
+      "real_test_fidelity_to_teacher": {
+        "accuracy": 0.9253533902789326,
+        "precision": 0.9250270075621174,
+        "recall": 0.9322107707940195,
+        "f1": 0.9286049958428225,
+        "confusion_matrix": [
+          [
+            11639,
+            1041
+          ],
+          [
+            934,
+            12844
+          ]
+        ]
+      },
+      "real_test_accuracy_to_true_label": {
+        "accuracy": 0.8880111875425202,
+        "precision": 0.8880086424198775,
+        "recall": 0.8975105546658902,
+        "f1": 0.8927343156065598,
+        "confusion_matrix": [
+          [
+            11165,
+            1555
+          ],
+          [
+            1408,
+            12330
+          ]
+        ]
+      },
+      "error_fidelity": {
+        "teacher_misclassified_count": 2252,
+        "teacher_misclassified_rate": 0.08511603295789553,
+        "misclassified_fidelity": {
+          "subset_name": "teacher_misclassified",
+          "row_count": 2252,
+          "share_of_test_set": 0.08511603295789553,
+          "fidelity_to_reference": {
+            "accuracy": 0.7193605683836589,
+            "precision": 0.7278368794326241,
+            "recall": 0.7164048865619547,
+            "f1": 0.7220756376429199,
+            "confusion_matrix": [
+              [
+                799,
+                307
+              ],
+              [
+                325,
+                821
+              ]
+            ]
+          },
+          "peer_vs_true_label": {
+            "accuracy": 0.28063943161634103,
+            "precision": 0.2721631205673759,
+            "recall": 0.27757685352622063,
+            "f1": 0.2748433303491495,
+            "confusion_matrix": [
+              [
+                325,
+                821
+              ],
+              [
+                799,
+                307
+              ]
+            ]
+          },
+          "peer_matches_reference_count": 1620,
+          "peer_matches_reference_rate": 0.7193605683836589,
+          "peer_matches_true_label_count": 632,
+          "peer_matches_true_label_rate": 0.28063943161634103
+        },
+        "teacher_false_positive_subset": {
+          "subset_name": "teacher_false_positives",
+          "row_count": 1146,
+          "share_of_test_set": 0.04331393151409781,
+          "fidelity_to_reference": {
+            "accuracy": 0.7164048865619547,
+            "precision": 1.0,
+            "recall": 0.7164048865619547,
+            "f1": 0.8347737671581088,
+            "confusion_matrix": [
+              [
+                0,
+                0
+              ],
+              [
+                325,
+                821
+              ]
+            ]
+          },
+          "peer_vs_true_label": {
+            "accuracy": 0.2835951134380454,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "confusion_matrix": [
+              [
+                325,
+                821
+              ],
+              [
+                0,
+                0
+              ]
+            ]
+          },
+          "peer_matches_reference_count": 821,
+          "peer_matches_reference_rate": 0.7164048865619547,
+          "peer_matches_true_label_count": 325,
+          "peer_matches_true_label_rate": 0.2835951134380454
+        },
+        "teacher_false_negative_subset": {
+          "subset_name": "teacher_false_negatives",
+          "row_count": 1106,
+          "share_of_test_set": 0.041802101443797715,
+          "fidelity_to_reference": {
+            "accuracy": 0.7224231464737794,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "confusion_matrix": [
+              [
+                799,
+                307
+              ],
+              [
+                0,
+                0
+              ]
+            ]
+          },
+          "peer_vs_true_label": {
+            "accuracy": 0.27757685352622063,
+            "precision": 1.0,
+            "recall": 0.27757685352622063,
+            "f1": 0.4345364472753008,
+            "confusion_matrix": [
+              [
+                0,
+                0
+              ],
+              [
+                799,
+                307
+              ]
+            ]
+          },
+          "peer_matches_reference_count": 799,
+          "peer_matches_reference_rate": 0.7224231464737794,
+          "peer_matches_true_label_count": 307,
+          "peer_matches_true_label_rate": 0.27757685352622063
+        }
+      },
+      "artifacts": {
+        "model_path": "C:\\Users\\thanh\\OneDrive - UTS\\CSS2\\artifact_2\\surrogates\\ebm_local_only_full_i0_deep_neural_net.pkl",
+        "plot_dir": "C:\\Users\\thanh\\OneDrive - UTS\\CSS2\\artifact_2\\surrogates\\ebm_plots_local_only_full_i0_deep_neural_net"
+      }
+    }
+  }
+}
